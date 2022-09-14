@@ -1,24 +1,52 @@
-# README
+## Blog App
+> A blog made by Ruby on Rails.
+This is an educational project for learning Ruby on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with
+- Ruby
+- Rails
+- PostgresQL
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Prerequisites
+You need Ruby v3+, Rails v7+ and Postgresql installed on your machine.
 
-* System dependencies
+### Setup
 
-* Configuration
+- Clone this repo locally using git in the command line with the following command
+```ruby
+> https://github.com/divinecharlotte/blog-app.git
+```
+- Alternatively, you can just download the complete zip file and extract the folder in your directory
 
-* Database creation
+### Usage
 
-* Database initialization
+In the project directory,open terminal and run this command:
 
-* How to run the test suite
+```ruby
+> rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Author
 
-* Deployment instructions
+👤 **Charlotte Divine**
 
-* ...
+- GitHub: [divinecharlotte](https://github.com/divinecharlotte)
+- LinkedIn: [charlotte-divine](https://www.linkedin.com/in/charlotte-divine-dusenge/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
