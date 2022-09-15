@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   def update_posts_counter
-    author.update(posts_counter: author.posts.count)
+    author.increment!(:post_counter)
   end
 
   def recent_five_comments
