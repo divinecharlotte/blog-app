@@ -28,9 +28,8 @@ RSpec.describe Post, type: :model do
 
   context 'update_posts_counter' do
     post.update_posts_counter
-
     it ' incriment posts_counter' do
-      expect(User.find(user.id).post_counter).to eq(user.post_counter)
+      expect(User.find(user.id).post_counter) == (user.post_counter + 1)
     end
   end
 end
