@@ -11,7 +11,7 @@ RSpec.describe Comment, type: :model do
     likes_counter: 0, author_id: user.id
   )
 
-  comment = Comment.create(post: post, author: user)
+  comment = Comment.create(post:, author: user)
 
   context 'update_comments_counter' do
     comment.update_comments_counter
