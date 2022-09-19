@@ -5,7 +5,7 @@
     <p><%= @user.bio %><p>
   </div>   
   <ul class="list-cont">
-  <% if @user.posts_counter > 0 %>
+  <% if @user.post_counter > 0 %>
     <% @user.recent_three_posts.each do |post| %>
       <a href="/users/<%= @user.id %>/posts/<%= post.id %>" >
         <%= render 'shared/post', post: post %>
