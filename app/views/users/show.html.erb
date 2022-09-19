@@ -1,2 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<section>
+  <%= render 'shared/user', user:@user %>
+  <div class="bio-wrapper">
+    <h4>Bio:</h4>
+    <p><%= @user.bio %><p>
+  </div>   
+  <ul class="list-cont">
+  <% if @user.posts_counter > 0 %>
+    <% @user.recent_three_posts.each do |post| %>
+      <a href="/users/<%= @user.id %>/posts/<%= post.id %>" >
+        <%= render 'shared/post', post: post %>
+      </a>
+    <% end %>
+  <% else %>
+    <li>No Posts</li>
+  <% end %>
+</ul>
+  <div class="btn-wrapper">
+  <a href="/users/<%= @user.id %>/posts"><button type="button">See All Posts</button></a>
+  </div>
+</section>
