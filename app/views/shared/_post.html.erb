@@ -1,0 +1,8 @@
+<li>
+      <h4><%= post.title %></h4>
+      <p><%= post.text.first(150) %>...</p>
+      <span>
+       Comments: <%= post.comments_counter %> ,
+       Likes: <%= post.likes_counter %>
+      </span>
+</li>
