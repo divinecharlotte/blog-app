@@ -19,6 +19,10 @@ section {
   margin: 40px auto;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   font-size: 28px;
   font-weight: 700;
