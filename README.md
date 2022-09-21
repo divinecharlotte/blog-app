@@ -28,6 +28,13 @@ In the project directory,open terminal and run this command:
 > rails server
 ```
 
+### Testing
+This command will run all the tests in your terminal:
+
+  ```ruby
+  > rspec spec
+  ```
+  
 ## Author
 
 👤 **Charlotte Divine**
