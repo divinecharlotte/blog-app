@@ -1,19 +1,1 @@
 <h1>Here is the Post content for a given user</h1>
-<section >
-<div class="post-wrapper">
-<div>
-  <span> <%= @post.title %> By  <%= @post.author.name %> </span>
-  <span>
-    Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
-  </span>
-</div>
-<p><%= @post.text %></p>
-</div>
-  <ul class="comments-list-cont">
-      <% if @post.comments_counter > 0 %>
-          <%= render 'shared/comment', comments: @post.comments %>
-      <% else %>
-      <li>No comments</li>
-    <% end %>
-  </ul>   
-</section>
