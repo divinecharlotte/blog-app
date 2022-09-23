@@ -19,6 +19,12 @@ section {
   margin: 40px auto;
 }
 
+h1 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 h2 {
   font-size: 28px;
   font-weight: 700;
@@ -44,6 +50,14 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+}
+
+input,
+textarea {
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  resize: vertical;
 }
 
 .user-card-cont {
@@ -137,4 +151,72 @@ button {
 .post-wrapper div span:last-child {
   font-size: 13px;
   font-weight: 700;
+}
+
+.create-btn {
+  width: 100%;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.submit-btn {
+  padding: 10px 0;
+  width: 200px;
+  border: 2px #000 solid;
+  background-color: transparent;
+  box-shadow: 4px 4px 1px rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comment-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px #000 solid;
+  margin-top: 20px;
+}
+
+.comment-text-cont {
+  padding: 5px;
+  width: calc(100% - 210px);
+  font-size: 15px;
+  border: none;
+}
+
+.post-form-cont {
+  width: 450px;
+  margin: 40px auto;
+  display: grid;
+  row-gap: 15px;
+}
+
+.post-form {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 5px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.title-input,
+.text-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px #000 solid;
+}
+
+.text-input {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#post-btn {
+  width: 100%;
+  text-transform: uppercase;
 }
