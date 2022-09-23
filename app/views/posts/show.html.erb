@@ -1,12 +1,13 @@
 <section >
 <div class="post-wrapper">
-<div>
-  <span> <%= @post.title %> By  <%= @post.author.name %> </span>
-  <span>
-    Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
-  </span>
-</div>
-<p><%= @post.text %></p>
+  <div>
+    <span> <%= @post.title %> By  <%= @post.author.name %> </span>
+    <span>
+      Comments: <%= @post.comments_counter %> , Likes: <%= @post.likes_counter %>
+    </span>
+  </div>
+  <p><%= @post.text %></p>
+  <%= render'/shared/new_like' %>
 </div>
   <ul class="comments-list-cont">
       <% if @post.comments_counter > 0 %>
@@ -14,5 +15,6 @@
       <% else %>
       <li>No comments</li>
     <% end %>
+  <%= render '/shared/new_comment'%>
   </ul>   
 </section>
