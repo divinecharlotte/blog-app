@@ -1,10 +1,13 @@
 require 'rails_helper'
 
-RSpec.feature "UserShow.spec.rbs", type: :feature do
+RSpec.feature 'UserShow.spec.rbs', type: :feature do
   before :each do
-    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.', post_counter: 0)
-    @user2 = User.create(name: 'Joel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Student at microverse.', post_counter: 0)
-    @post = Post.create(author: @user, title: 'Post 1', text: 'This is my new post', likes_counter: 0, comments_counter: 0)
+    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',
+                        post_counter: 0)
+    @user2 = User.create(name: 'Joel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Student at microverse.',
+                         post_counter: 0)
+    @post = Post.create(author: @user, title: 'Post 1', text: 'This is my new post', likes_counter: 0,
+                        comments_counter: 0)
     Comment.create(post: @post, author: @user2, text: 'Hi Lilly!')
     Comment.create(post: @post, author: @user2, text: 'Hi Lilly!')
 
