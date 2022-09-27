@@ -43,10 +43,6 @@ RSpec.feature 'Post Index Page', type: :feature do
   it 'display the how many Likes  a post has' do
     expect(page).to have_content("Likes: #{@first_post.likes_counter}")
   end
-
-  it "" do
-    
-  end
   it 'after clicking on a post, redirect on a post show page' do
     click_link(@first_post.title)
     expect(page).to have_content("Comments: #{@first_post.comments_counter} ")
