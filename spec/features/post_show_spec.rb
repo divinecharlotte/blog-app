@@ -29,8 +29,8 @@ RSpec.feature 'Test Post show', type: :feature do
   it 'I can see the username of each commentor' do
     expect(page).to have_content(@user.name)
   end
-#   it 'I can see the comment each commentor left' do
-#     expect(page).to have_content('Hi Lilly!')
-#   end
+  it 'I can see the comment each commentor left' do
+    expect(page).to have_content('Hi Lilly!')
+  end
 
 end
