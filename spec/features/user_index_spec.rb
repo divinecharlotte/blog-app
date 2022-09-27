@@ -20,6 +20,10 @@ RSpec.feature 'User Index Page', type: :feature do
         expect(page).to have_content('Number of posts: 0')
     end
 
-    
+    it " When I click on a user it should redirected to that user's show page" do
+        visit(user_path(@user.id))
+        expect(page).to have_content('Bio')
+
+    end
    
 end
