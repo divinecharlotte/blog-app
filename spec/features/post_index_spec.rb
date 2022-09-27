@@ -31,6 +31,20 @@ RSpec.feature 'Post Index Page', type: :feature do
   it 'displays the post body' do
     expect(page).to have_content(@first_post.text)
   end
+end
+RSpec.feature 'Post Index Page', type: :feature do
+  before :each do
+    @user = User.create(name: 'Lilly', photo: 'https://images.unsplash.com/photo87&q=80', bio: 'Teacher from Poland.',
+                        post_counter: 0)
+    @user2 = User.create(name: 'Tom', photo: 'https://images.uw=687&q=80', bio: 'Teacher from Poland.',
+                         post_counter: 0)
+    @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                              likes_counter: 0)
+    5.times do |_i|
+      Comment.create(post: @first_post, author: @user2, text: 'Hi Lilly!')
+    end
+    visit user_posts_path(@user)
+  end
 
   it 'display the first comment on a post' do
     expect(page).to have_content('Hi Lilly!')
