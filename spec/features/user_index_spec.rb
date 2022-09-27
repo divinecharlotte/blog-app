@@ -13,4 +13,9 @@ RSpec.feature 'User Index Page', type: :feature do
 
     end
 
+    it 'I can see the profile picture for each user' do
+        expect(page).to have_selector('img')
+    end
+
+   
 end
