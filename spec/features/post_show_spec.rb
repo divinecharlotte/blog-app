@@ -20,6 +20,17 @@ RSpec.feature 'Test Post show', type: :feature do
     it 'I can see how many comments it has' do
         expect(page).to have_content('Comments: 2')
   end
-
+  it 'I can see how many likes it has' do
+    expect(page).to have_content('Likes: 0')
+  end
+#   it 'I can see the post body' do
+#     expect(page).to have_content(@post.text)
+#   end
+#   it 'I can see the username of each commentor' do
+#     expect(page).to have_content(@user2.name)
+#   end
+#   it 'I can see the comment each commentor left' do
+#     expect(page).to have_content('Hi Lilly!')
+#   end
 
 end
