@@ -19,8 +19,8 @@ default: &default
   encoding: unicode
   port: 5432
   host: localhost
-  username: assad
-  password: password
+  username: postgres
+  password: charlotte82
 
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
