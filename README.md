@@ -35,12 +35,17 @@ This command will run all the tests in your terminal:
   > rspec spec
   ```
   
-## Author
+## Authors
 
 👤 **Charlotte Divine**
 
 - GitHub: [divinecharlotte](https://github.com/divinecharlotte)
 - LinkedIn: [charlotte-divine](https://www.linkedin.com/in/charlotte-divine-dusenge/)
+
+👤 **Assad Isah**
+
+- Github: [nottherealalanturing](https://github.com/nottherealalanturing)
+- LinkedIn: [Assad Isah](https://linkedin.com/in/assadisah)
 
 ## 🤝 Contributing
 
