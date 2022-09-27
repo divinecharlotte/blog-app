@@ -15,12 +15,13 @@ RSpec.feature 'Post Index Page', type: :feature do
   it 'displays user profile picture' do
     expect(page).to have_css("img[src*='#{@user.photo}']")
   end
-  it 'displays number of posts' do
-    expect(page).to have_content('Number of posts: 1')
-  end
 
   it "displays the user's username " do
     expect(page).to have_content(@user.name)
+  end
+
+  it 'displays number of posts user has written' do
+    expect(page).to have_content('Number of posts: 1')
   end
 
   it 'displays the post title' do
@@ -35,14 +36,17 @@ RSpec.feature 'Post Index Page', type: :feature do
     expect(page).to have_content('Hi Lilly!')
   end
 
-  it 'display the how many comments' do
+  it 'display how many comments a post has' do
     expect(page).to have_content("Comments: #{@first_post.comments_counter}")
   end
 
-  it 'display the how many Likes' do
+  it 'display the how many Likes  a post has' do
     expect(page).to have_content("Likes: #{@first_post.likes_counter}")
   end
 
+  it "" do
+    
+  end
   it 'after clicking on a post, redirect on a post show page' do
     click_link(@first_post.title)
     expect(page).to have_content("Comments: #{@first_post.comments_counter} ")
