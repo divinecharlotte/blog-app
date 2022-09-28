@@ -1,0 +1,25 @@
+<div class="post-form-cont">
+  <h1>Sign up</h1>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class:"post-form", data: {turbo: false}) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+      <%= f.label :name , class:'label'%>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name",class:"title-input"%>
+      <%= f.label :email , class:'label'%>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"title-input"%>
+      <%= f.label :photo, "Profile Image Url" , class:'label'%>
+      <%= f.text_field :photo, autofocus: true, autocomplete: "photo",class:"title-input"%>
+      <%= f.label :bio, "Biography" , class:'label'%>
+      <%= f.text_area :bio, autofocus: true, autocomplete: "bio" ,class:"text-input"%>
+      <%= f.label :password , class:'label'%>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password" ,class:"title-input"%>
+      <%= f.label :password_confirmation , class:'label'%>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class:"title-input"%><br/><br/>
+
+      <%= f.submit "Sign up", class:"submit-btn", id:"post-btn"%>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

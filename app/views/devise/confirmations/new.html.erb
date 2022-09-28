@@ -1,0 +1,12 @@
+<div class="post-form-cont">
+<h1>Resend confirmation instructions</h1>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), class:"post-form", html: { method: :post , data: {turbo: false}}) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= f.label :email , class:'label'%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"title-input", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %><br/><br/>
+
+    <%= f.submit "Resend confirmation instructions" , class:"submit-btn", id:"post-btn"%>
+<% end %>
+<%= render "devise/shared/links" %>
+  </div>
