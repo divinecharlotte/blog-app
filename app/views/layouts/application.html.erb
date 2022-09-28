@@ -10,6 +10,17 @@
   </head>
 
   <body>
+  <header>
+      <% if current_user %>
+        <%=  render "layouts/navbar" %>
+      <% else %>
+      <%= render "layouts/unauth" %>
+      <% end %>
+      </div>
+    </div>
+  </div> 
+    <hr />
+  </header>
   <% if notice %>
   <p class="notice"><%= notice %></p>
   <% elsif alert %>

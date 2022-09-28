@@ -1,0 +1,18 @@
+<div class="navbar">
+<h1><a href="#home">Notablog</a></h1>
+<a href="#news">Users</a>
+<a href="#news">Posts</a>
+<div class="dropdown">
+  <button class="dropbtn">
+  <% if current_user %>
+    <%= current_user.name %>
+  <% end %>
+
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href=""New Post</a>
+    <a href="#">My Profile</a>
+    <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+  </div>
+</div>
