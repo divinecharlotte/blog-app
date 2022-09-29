@@ -11,6 +11,7 @@ gem 'sprockets-rails'
 
 gem 'devise'
 
+gem 'cancancan'
 group :development, :test do
   gem 'rspec-rails'
 end
