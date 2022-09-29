@@ -1,3 +1,10 @@
 <% comments.each do |comment| %>
-  <li class='comment'><%= comment.author.name %> : <%= comment.text%></li>
+  <li class='comment'><%= comment.author.name %> : <%= comment.text%>
+  <% if can? :destroy, @comment %>
+       <%= button_to 'Delete comment',
+       user_post_comment_path(comment.author, comment.post,comment),
+             method: :delete,
+             data: {confirm: 'Are You Sure You Want to Delete This comment'}, class: 'btn btn-danger'%>
+     <% end %>
+  </li>
 <% end %>

@@ -8,6 +8,13 @@
   </div>
   <p><%= @post.text %></p>
   <%= render'/shared/new_like' %>
+  <% if can? :destroy, @post %>
+       <%= button_to 'Delete Post',
+             user_post_path,
+             method: :delete,
+             data: {confirm: 'Are You Sure You Want to Delete This Post'}, class: 'btn btn-danger'%>
+     <% end %>
+
 </div>
   <ul class="comments-list-cont">
       <% if @post.comments_counter > 0 %>
