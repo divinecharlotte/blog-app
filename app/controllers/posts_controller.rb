@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     user.post_counter -= 1
     post.destroy
     user.save
-    flash[:success] = 'You have deleted this post!'
+    flash[:success] = "You have deleted this post!"
     redirect_to user_path(current_user.id)
   end
   private
