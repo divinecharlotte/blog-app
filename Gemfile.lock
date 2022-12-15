@@ -118,6 +118,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.1)
+    jwt (2.5.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -292,6 +293,7 @@ DEPENDENCIES
   ffi
   importmap-rails
   jbuilder
+  jwt (~> 2.4)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

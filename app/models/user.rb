@@ -14,6 +14,12 @@ class User < ApplicationRecord
     posts.last(3)
   end
 
+  after_save :add_token
+
+  def add_token
+    update_column(:authentication_token, ApiHelper::JsonWebToken.encode(email))
+  end
+
   def admin?
     role == 'admin'
   end

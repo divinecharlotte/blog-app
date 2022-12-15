@@ -12,6 +12,10 @@ gem 'sprockets-rails'
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'jwt', '~> 2.4'
+
+gem 'parser'
 group :development, :test do
   gem 'rspec-rails'
 end
