@@ -1,6 +1,6 @@
 ## Blog App
 > A blog made by Ruby on Rails.
-This is an educational project for learning Ruby on Rails.
+This is an educational project for learning Ruby on Rails. where I created a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## Built with
 - Ruby
